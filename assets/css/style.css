@@ -895,7 +895,14 @@
     margin: 0;
     display: inline-block;
     font-size: 1.8rem;
+    
+  }
+
+  .menu-items{
     order: 2;
+  }
+  .nav-actions{
+    order: 1;
   }
 
   .nav-actions li {
@@ -931,11 +938,11 @@
     background-position: center right;
     height: 100vh;
     }
-    .menu {
+    .menu-items {
       width: 70%;
     }
     .nav-actions{
-      width: 25%;
+      width: 29%;
     }
     .slogan {
       height: calc(100% - 450px);
@@ -964,8 +971,6 @@
     .header-main-page {
       background-position: right -15vw top ; 
     }
-    
-    
     
     .nav-actions{
       margin: 0;
@@ -997,16 +1002,24 @@
 }
   @media screen and (max-width: 600px) {
     .header-main-page {
-      width: 100vw;
-      height: auto;
-      background-position: right -40vw top;
+      
+      height: 100vh;
+      background-position: right -30vw top;
     }
-    .menu {
-      width: 100%;
-  }
+    
   .menu li {
     float: none;
   }
+  .slogan {
+    height: calc(100% - 250px);
+  }
+  .slogan-item h1:after {
+    display:none;
+  }
+  .slogan-item h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+}
     .reasons{
       padding:0 5px;
       margin: 30px 0;
@@ -1137,7 +1150,7 @@
 
   .navbar .menu-items {
     padding-top: 100px;
-    background: rgba(78, 78, 175, 0.2);
+    background: #01172f;
     height: 100vh;
     max-width: 300px;
     transform: translate(-150%);
@@ -1171,5 +1184,16 @@
 
   .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     transform: rotate(-35deg);
+  }
+  .nav-actions{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.5em;
+    width: 35%
+  }
+
+  .btn-small {
+    font-size: 1rem;
   }
   }
