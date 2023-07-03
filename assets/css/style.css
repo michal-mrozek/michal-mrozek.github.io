@@ -1192,3 +1192,10 @@
     font-size: 1rem;
   }
   }
+  @media screen and (max-width: 400px) {
+    .header-main-page {
+      
+      height: 100vh;
+      background-position: right -70vw top;
+    }
+  }
