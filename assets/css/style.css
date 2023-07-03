@@ -384,41 +384,6 @@
     height: 100vh;
   }
 
-  /* NAV */
-
-  .container {
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-
-  .menu, .nav-actions {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-    font-size: 1.8rem;
-  }
-
-  .menu li {
-    float: left;
-  }
-
-  .nav-actions li {
-    float: right;
-  }
- 
-  .nav-actions {
-    font-size: 1.4rem;
-    color: #737373;
-    margin: 30px 0 8px;
-  }
-
-  a {
-    text-decoration: none;
-    color: silver;
-  }
-  
-  
   /* BUTTONS */
 
   .btn {
@@ -427,8 +392,6 @@
     padding: 1em 1.666em;
     border: 1px solid silver;
     text-align: center;
-    -webkit-transition: border-color 0.2s ease-in-out;
-    -o-transition: border-color 0.2s ease-in-out;
     transition: border-color 0.2s ease-in-out;
     background: transparent;
     cursor: pointer;
@@ -448,6 +411,8 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-style: normal;
+    text-decoration: none;
+    color: silver;
   }
   
   
@@ -538,7 +503,6 @@
     margin: 0 auto;
     padding: 50px 0;
     max-width: 1100px;
-    width: 100%;
     background-color: #ebebeb;
     display: flex;
     align-items: baseline;
@@ -669,7 +633,6 @@
   flex-direction: column;
   align-items: center;
   max-width: 80%;
-  width: 100%;
   padding: 0 30px;
   margin: 60px auto;
 }
@@ -683,7 +646,6 @@
 .services-desc > p {
   margin: 0 auto 60px;
   max-width: 80%;
-  width: 100%;
   font-size: 2.2rem;
   text-align: center;
   line-height: 2em;
@@ -760,17 +722,25 @@
   /* FOOTER */
 
   footer {
-    min-height: 70vh;
-    background-color: #ebebeb;
-    background-image: url(../images/footer-bg.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
     position: relative;
+    background-color: #ebebeb;
+  }
+
+  .footer-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70vh;
+    height: 100%;
+    background-image: url(../images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
   }
   
   
@@ -897,10 +867,66 @@
     width: 90vw;
   }
   
+/* HAMBURGER NAV */
+
+  .navbar input[type="checkbox"],
+  .navbar .hamburger-lines {
+    display: none;
+  }
+  
+  .navbar {
+    position: relative;
+    opacity: 0.85;
+    height: 64px;
+    z-index: 12;
+    margin-right: 10px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+
+  .menu-items, .nav-actions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    font-size: 1.8rem;
+    order: 2;
+  }
+
+  .nav-actions li {
+    float: right;
+  }
+  
+  .menu-items li {
+    float: left;
+    list-style: none;
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .navbar-container a {
+    text-decoration: none;
+    color: silver;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-container a:hover {
+    color: gold;
+    transition: color 0.3s ease-in-out;
+  }
+
+
  /* RESPONSIVNESS */
 
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1024px) {
     .header-main-page{
     background-position: center right;
     height: 100vh;
@@ -915,6 +941,10 @@
       height: calc(100% - 450px);
       justify-content: right;
     }
+    .slogan-item h1 {
+      font-size: 5rem;
+      line-height: 6rem;
+    } 
     .about-me{
       display: contents;
       text-align: center;
@@ -930,11 +960,216 @@
 
 }
 
-  @media screen and (max-width: 950px) {
-  
+  @media screen and (max-width: 943px) {
+    .header-main-page {
+      background-position: right -15vw top ; 
+    }
+    
+    
+    
+    .nav-actions{
+      margin: 0;
+      width: 25%;
+      float:right;
+    }
+    .btn{
+      font-size: 1.7rem;
+      padding: 1em 1em;
+    }
+    .services-items li{
+      flex-direction: column;
+    }
+    .services-items .col::after{
+    margin-bottom: 25px;
+    margin-top: 5px;
+    }
+    .services-items li{
+      margin:0;
+    }
+
+    .footer-bg{
+      opacity: 0.3;      
+    }
+    .contact {
+      max-width: 60%;
+    }
+
+}
+  @media screen and (max-width: 600px) {
+    .header-main-page {
+      width: 100vw;
+      height: auto;
+      background-position: right -40vw top;
+    }
+    .menu {
+      width: 100%;
+  }
+  .menu li {
+    float: none;
+  }
+    .reasons{
+      padding:0 5px;
+      margin: 30px 0;
+    }
+    .reasons-container{
+      display: grid;
+    }
+    .reasons-item{
+      padding:10px 35px;
+    }
+    h2 {
+      
+      font-size: 2.5rem;
+    }
+    
+    .about-me-text p{
+      width: 100%;
+      text-align: justify;
+  } 
+  .about-me-text{
+    padding:0 5px;
+  }
+    .services{
+      margin:30px 5px;
+      max-width: 100%;
+      padding: 0;
+    }
+    .services-desc > p {
+      margin: 0 5px 60px;
+      max-width: 100%;
+      text-align: justify;
+    }
+    .description {
+      width: 100%;
+      text-align: justify;
+    }
+    .services-items .col:last-child{
+      text-align: left;
+    }
+
+    .services-items .col:last-child:after {
+      float: left;
+  }
+  footer {
+    height: auto;
+  }
+  .footer-bg {
+    width: 100%;
+    height: 100%;
+  }
+  .contact {
+    max-width: 100%;
+    margin-bottom: 30px;
+    padding-right: 0;
+}
+.bottom-line-icons{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+  .navbar {
+    opacity: 0.95;
   }
 
-  @media screen and (max-width: 800px) {
-  
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
   }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 23px;
+    width: 35px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: silver;
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: rgba(78, 78, 175, 0.2);
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
   
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(35deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-35deg);
+  }
+  }
