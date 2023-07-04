@@ -1142,6 +1142,12 @@
       }
     }
 
+    @media screen and (max-height: 650px) {
+      .slogan-container {
+        display: none;
+      }  
+    }
+
 
 
 
