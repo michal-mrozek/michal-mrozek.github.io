@@ -52,10 +52,38 @@ Explore the life coach website, understand the benefits of life coaching, and de
 
 ## Features
 
-- **About**: A section that introduces the life coach, highlighting their qualifications, experience, and philosophy.
-- **Services**: A description of the services offered, including coaching programs, one-on-one sessions, and workshops.
-- **Testimonials**: Testimonials from satisfied clients, showcasing the life coach's effectiveness and success stories.
-- **Contact**: Contact information, including email, phone number, and social media links, for potential clients to get in touch.
+- **Navigation**: Provides an easy reference to navigate between the 'Home', 'Reasons', 'About me', 'Work With Me' & 'Contact' sections.
+'Log in' and 'Register' buttons are for future developement.
+
+![Navigation](/assets/images-readme/navigation.png)
+
+- **Landing Page**: This defines the feel of the website, providing the user with an image and slogan that they can easily associate to guiding individuals towards personal growth.
+
+![Landing](/assets/images-readme/landing.png)
+
+- **Reasons**: Section presents compelling reasons for potential clients to select the life coach's services, emphasizing the unique value, expertise, and benefits they offer for personal growth and development. 'Register' button is for future developement.
+
+![Reasons](/assets/images-readme/reasons.png)
+
+- **About Me**: Section provides an introduction to the life coach, sharing information about her background, qualifications, experience, and personal philosophy. It aims to build trust and establish a connection with potential clients.
+
+![About Me](/assets/images-readme/about-me.png)
+
+
+- **Work With Me**: Section outlines the services offered by the life coach, such as coaching programs or workshops. It provides details on how potential clients can engage in the coaching process and highlights the benefits they can expect to receive.
+
+![Work With Me](/assets/images-readme/work-with-me.png)
+
+
+- **Contact**: Section of the website includes the following components:
+
+  - ***Contact Form***: A contact form where visitors can input their name, email address, and message to easily reach out to the life coach for inquiries, questions, or to request more information.
+
+  - ***Social Media Links***: Icon links to the life coach's social media profiles allowing visitors to connect with the life coach on various social platforms.
+
+The footer serves as a convenient and consistent location for visitors to access the contact form and engage with the life coach's social media presence, promoting further interaction and communication.
+
+![Contact](/assets/images-readme/contact.png)
 
 ## Technologies Used
 
@@ -67,7 +95,7 @@ The following technologies were used to develop this static website:
 - **GoogleFonts**: A font library used for slogan.
 - **FontAwesome**: An icon library used for adding visually appealing icons.
 
-I took inspiration for the design of the navigation bar from [https://alvarotrigo.com/blog/hamburger-menu-css/](https://alvarotrigo.com/blog/hamburger-menu-css/)
+I took inspiration for the design of the hamburger navigation from [https://alvarotrigo.com/blog/hamburger-menu-css/](https://alvarotrigo.com/blog/hamburger-menu-css/)
 
 ## Installation
 
@@ -81,6 +109,12 @@ The site was deployed to GitHub pages.
 
 - html files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no issues found.
 ![Jigsaw validator message](/assets/images-readme/css-test.png)
+
+### Unsolved Bug
+
+Link to "About Me" in hamburger menu doesn't work. In full width navigation menu working fine.
+
+![Bug](/assets/images-readme/bug.png)
 
 ## Contributing
 
