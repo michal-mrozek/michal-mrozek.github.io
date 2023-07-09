@@ -848,6 +848,7 @@
     position: absolute;
     right: 10vw;
     bottom: 20px;
+    z-index: 2;
   }
 
   footer .bottom-line-icons a img {
