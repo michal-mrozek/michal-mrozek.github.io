@@ -110,6 +110,16 @@ The site was deployed to GitHub pages.
 - html files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no issues found.
 ![Jigsaw validator message](/assets/images-readme/css-test.png)
 
+### Manual testing
+
+|Feature  |Action                               |Expected result                                    |Tested   |Passed |
+|---      |---                                  |---                                                |---      |---    |
+|Navbar   |Click buttons                        |The user is redirected                             |yes      |yes    |
+|Form     |Fill input boxes                     |Active input box is hightlighted                   |yes      |yes    |
+|Form     |Press submit without filled inputs   |Returned error                                     |yes      |yes    |
+|Form     |Press submit with data               |Form send POST message with the data               |yes      |yes    |
+
+
 ### Unsolved Bug
 
 Link to "About Me" in hamburger menu doesn't work. In full width navigation menu working fine.
